@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Mi Unidad Residencial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Open Sans -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+	<body data-spy="scroll" data-target="#scroll-spy">
+		<!-- Navbar -->
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-home" href="#home" role="button">
+						<svg class="lnr lnr-home">
+							<use xlink:href="#lnr-home"></use>
+						</svg>
+					</a>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#scroll-spy" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<i class="material-icons">&#xE5D2;</i>
+					</button>
+					<a class="navbar-brand" href="#home">Boom Scroll
+						<i class="material-icons">mouse</i>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="scroll-spy">
+
+					<ul class="nav navbar-nav ">
+						<li><a href="#servicios">Servicios</a></li>
+						<li><a href="#ejes">Estratégia</a></li>
+						<li><a href="#caracteristicas">Características</a></li>
+						<li><a href="#porque">¿Por qué adquirirlo?</a></li>
+						<li><a href="#contactenos">Contáctenos</a></li>
+						<li><a href="" data-toggle="modal" data-target="#login-modal">Iniciar Sesión</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Modal Inicio sesion -->
+		<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true" style="display: none;">
+			<div class="modal-dialog">
+				<div class="loginmodal-container">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h1>Inicie Sesión</h1>
+					<br>
+					<form action="" enctype="application/x-www-form-urlencoded" method="POST">
+						<select class="selectclass" data-toggle="tooltip" data-placement="bottom"
+							title="Si es del personal administrativo por favor seleccione la opción entrar como Administrador. Si usted es un usuario, use la aplicación móvil ó seleccione la opción entrar como Usuario."
+							required>
+							<option value="">Seleccione Rol</option>
+							<option value="usuario" onchange="this.form.action='/m/index.pl'">Usuario</option>
+							<option value="admin" onchange="this.form.action='/m/customer.pl'">Administrador</option>
+							<option value="app" onchange="this.form.action='./login_verificar.php'">App Manager</option>
+						</select>
+						<input class="borderclass" type="text" name="user" placeholder="Usuario" required>
+						<input class="borderclass" id="password-field" type="password" name="password" value=""
+							placeholder="Contraseña" required>
+						<span toggle="#password-field" class="fa eye fa-eye field-icon toggle-password"></span>
+						<input type="submit" name="login" class="login loginmodal-submit" value="Iniciar Sesión">
+					</form>
+					<span class="login-help">
+						<a>Al iniciar sesión acepta los </a>
+						<a href="#terminos" data-toggle="modal" data-target="#terminos"> <u style="color: blue">términos
+								y
+								condiciones</u></a> <a> y las </a>
+						<a href="#politicas" data-toggle="modal" data-target="#politicas"> <u
+								style="color: blue">politicas de privacidad</u></a>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Terminos y condiciones -->
+		<div class="modal fade" id="terminos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h1 class="terminosmodal-container">Términos y condiciones</h1>
+					</div>
+					<div class="modal-body">
+						<p>Términos del servicio</p>
+
+						<p>Entre las Partes</p>
+
+						<p>Los términos expresados en este contrato constituyen las condiciones de uso y privacidad para
+							todos los servicios prestados en la actualidad y los añadidos en el futuro, Norton de
+							Colombia en su sitio web www.nortondecolombia.com.co y su aplicación
+							http://nortondecolombia.com.co/</p>
+
+						<p>El usuario acepta, al momento de empezar a utilizar el servicio, respetar todas las
+							condiciones impuestas por este contrato.</p>
+
+						<p>Términos y condiciones</p>
+
+						<p>Aceptación</p>
+
+						<p>El usuario de este sitio, acepta por simple causal de uso del sistema Norton de Colombia lo
+							dispuesto en este contrato y en sus Términos y Condiciones, susceptible de cambio sin previo
+							aviso por parte de Norton de Colombia. Si el usuario representa una organización, está dando
+							por entendido que la organización acepta ceñirse a este contrato y que tiene las facultades
+							para actuar en nombre de aquella y por lo tanto obligarla frente a Norton de Colombia y
+							aceptar las obligaciones establecidas en el presente contrato. El usuario que no esté de
+							acuerdo con esto, no podrá hacer uso de los servicios prestados por Norton de Colombia.</p>
+
+						<p>Capacidad de Celebración de Contratos</p>
+
+						<p>Según la ley de Colombia, el usuario que acepte este acuerdo de términos y condiciones, debe
+							ser legalmente apto para celebrar un contrato según lo permita su autonomía de la voluntad y
+							las leyes que le sean aplicables. Refiérase entonces, el que quiera celebrar este contrato a
+							la teoría general de celebración de contratos de la ley que aplica en su país.</p>
+
+						<p>Norton de Colombia da por entendido que aquel usuario que acepte este acuerdo de términos y
+							condiciones conoce previamente si está o no en capacidad de celebrar contratos a nombre de
+							la persona que se determine como Usuario. Quienes sean considerados incapaces absolutos o
+							relativos o parciales deberán tener autorización de sus representantes legales para celebrar
+							este contrato, y serán estos últimos considerados responsables de cualquier conducta de sus
+							apoderados.</p>
+
+						<p>Registro de Cuentas y Usuarios</p>
+
+						<p>Norton de Colombia presta un servicio de software que se accede a través de su sitio web
+							www.Norton de Colombia.com Los usuarios que accedan a este servicio deberán registrar una
+							cuenta y brindar la información solicitada en los formularios que se habilitan a la hora de
+							registrar una cuenta. Norton de Colombia da por entendido que cualquier información
+							ingresada en estos formularios es hecha bajo juramento y por lo tanto exonera a Norton de
+							Colombia de poseer información falsa sobre cualquier usuario.</p>
+
+						<p>Norton de Colombia permite el ingreso de una cantidad limitada de usuarios según el plan que
+							cada titular o usuario de cuenta haya elegido al momento de registrar su cuenta. Norton de
+							Colombia no permite, bajo ninguna circunstancia, que estos usuarios sean distintos de
+							aquellos que el titular de la cuenta haya decidido habilitar como tales para el uso de la
+							plataforma y estos no podrán ser reemplazados por otras personas que conozcan las
+							credenciales para ingresar a la plataforma. De suceder una situación como ésta, Norton de
+							Colombia no se hace responsable por el uso pernicioso de la información de la cuenta en
+							contra del titular de la misma ni frente al usuario ni frente a terceros.</p>
+
+						<p>Descripción del Servicio</p>
+
+						<p>Norton de Colombia presta el servicio de su aplicación web en dos modalidades, gratis y pago.
+							Norton de Colombia podrá dejar de ofrecer el plan Gratis para usuarios nuevos, , pero el
+							usuario que lo adquirió antes podrá seguir usándolo indefinidamente siempre y cuando no
+							realice cambios posteriores en su plan. El usuario adquiere una licencia no-exclusiva,
+							mundial y temporal e intransferible para usar el sistema Norton de Colombia según las
+							condiciones del plan que haya elegido al momento de pagar por el servicio, o si es el caso
+							acepta las condiciones que tiene al ser un usuario gratis pero en ningún momento adquiere
+							propiedad sobre la plataforma.</p>
+
+						<p>Los derechos de autor sobre las obras de software que componen la plataforma y los Servicios
+							serán de titularidad de Norton de Colombia y bajo ninguna interpretación de éstos términos
+							de servicio se entenderán transferidos al usuario.</p>
+
+						<p>El servicio de Norton de Colombia se inicia al momento de registrar una cuenta en el sitio
+							web de Norton de Colombia, tras haber aceptado las condiciones expresadas en este contrato.
+							El servicio consiste en el uso del software Norton de Colombia disponible en www.Norton de
+							Colombia.com y www.Norton de Colombia.co todos los servicios disponibles en sitios web
+							asociados, aplicaciones móviles y Api.</p>
+
+						<p>El usuario se hace conocedor de los servicios por los que está pagando a la hora de usar
+							alguno de los planes que ofrece Norton de Colombia. Norton de Colombia no se hará
+							responsable en ningún caso por los errores cometidos por el usuario a la hora de elegir su
+							plan, así como tampoco al momento de digitar o ingresar su información tanto personal como
+							de la operación y marcha de su actividad empresarial ni tampoco de la clasificación que
+							realice de la misma lo que afectará irremediablemente los resultados arrojados por el
+							Software.</p>
+
+						<p>Norton de Colombia da por entendido que el titular de la cuenta y los usuarios conocen
+							cualquier cambio que se haga en la configuración de ésta, así como que realizará los cambios
+							que considere pertinentes. Norton de Colombia no se responsabilizará por la pérdida de
+							información que ocurra por fuerza mayor, caso fortuito o hecho de un tercero tal y como se
+							explica bajo el título “Operación del Sitio”.</p>
+
+						<p>Norton de Colombia garantiza al Usuario el libre acceso al sitio web www.Norton de
+							Colombia.com y aplicación movil para ver la información allí disponible, bajo condiciones
+							normales, sin embargo el usuario acepta que existan circunstancias técnicas por las que ésta
+							información puede llegar a estar inaccesible de manera temporal y por lo tanto exonera a
+							Norton de Colombia de cualquier tipo de responsabilidad por este hecho, bajo el entendido de
+							que esto puede obedecer a limitaciones inherentes al estado de la tecnología en la
+							actualidad.</p>
+
+						<p>Información de la cuenta</p>
+
+						<p>Norton de Colombia es un aplicativo Web, el cual proporciona un sitio donde se alojan datos
+							que el usuario administra bajo su cuenta y riesgo. Norton de Colombia vela por mantener la
+							información de los usuarios, segura y toma las precauciones a su juicio necesarias para
+							ello, más no se responsabiliza por actos mal intencionados de terceros y las consecuencias
+							de ello frente al usuario o frente a terceros.</p>
+
+						<p>Norton de Colombia pone en conocimiento de sus usuarios, que la información que suministre se
+							albergará en servidores de terceros, que cumplen con los más altos estándares de seguridad e
+							idoneidad.</p>
+
+						<p>Norton de Colombia tampoco se hace responsable por el tipo de información ingresada por cada
+							usuario en su cuenta ni por los resultados inadecuados si la misma se ingresó de manera
+							inadecuada de acuerdo con los parámetros contables y fiscales aplicables a la materia en
+							cada caso. Se da a entender que el usuario, al usar los servicios de Norton de Colombia,
+							hará un uso sano y legal de todas las herramientas que se ponen a su disposición y esto
+							exonera a Norton de Colombia de cualquier uso indebido de su información por parte de
+							cualquier usuario, entendiéndose por ello el usar información para evadir obligaciones
+							tributarias, entre otras.</p>
+
+						<p>Norton de Colombia no estará obligada a velar por la legalidad del contenido e información
+							que los usuarios alberguen en su cuenta a través de los Servicios prestados, sin embargo,
+							podrá tomar los correctivos en contra de información ilegal, cuando lo considere pertinente.
+						</p>
+
+						<p>El usuario se obliga a la hora de usar cualquiera de los servicios de Norton de Colombia a
+							(i) no causar daño físico, moral o mental a otros usuarios del servicio (ii) no utilizar el
+							servicio con fines maliciosos o de mala voluntad, ni para beneficiarse en perjuicio de
+							terceros y mucho menos del Estado entendiendo por éste, aquel que de acuerdo con la
+							normatividad que le sea aplicable, sea quien deba recibir dinero por concepto de impuestos
+							bajo cualquier denominación por el resultado de la operación mercantil del usuario. (iii) no
+							usar el servicio con fines criminales o ilegales ni para sacar provecho o beneficio ilícito
+							para sí o para terceros, bien sea remunerado o no, (iv) no publicar información que vulnere
+							derechos de terceros, tales como derechos de propiedad intelectual, secretos industriales o
+							cualquier otro que sea de propiedad de terceros y respecto de los cuales no se encuentre
+							autorizado (v) publicar información información sensible que ya no es vigente o que pueda
+							inducir a error a terceros o al Estado</p>
+
+						<p>El usuario de Norton de Colombia manifiesta ser dueño de la información que ingresa en el
+							sistema y bajo ninguna circunstancia esta información pasará a ser propiedad de Norton de
+							Colombia SAS., y de manera inversa, esta última sociedad es la única dueña de la plataforma
+							sobre la cual el usuario ingresa la información , sin que respecto de ésta se considera
+							surtida transferencia alguna en razón de éste contrato. Si el usuario da por terminado el
+							contrato tendrá la información a su alcance, pero en ningún momento Norton de Colombia se
+							obliga a entregar la misma en formato alguno ni a llevar a cabo ningún tipo de proceso de
+							migración, ni mucho menos a efectuar un desarrollo para que la información pueda ser
+							analizada, ingresada o digitalizada en cualquier otro software, pues sólo se ingresan datos,
+							para su consulta y procesamiento en aras de su funcionamiento y uso.</p>
+
+						<p>Adicional a lo anterior, Norton de Colombia no se responsabiliza por el mal diligenciamiento
+							de un formulario o por la información que erróneamente suministre el USUARIO al momento de
+							realizar un trámite o de ingresar la información al software.</p>
+
+						<p>Política de privacidad</p>
+
+						<p>Modo de uso de las cookies</p>
+
+						<p>Norton de Colombia, Mediante la instalación de cookies e identificadores propios y de
+							terceros y a través de herramientas para el análisis de uso de cuenta, podrá realizar
+							actividades de seguimiento a los usuarios que utilizan su aplicación. Con estas
+							herramientas, Norton de Colombia podrá recopilar información de cada usuario para el
+							análisis de estadísticas e implementación de estrategias de comunicación y publicidad. Estas
+							herramientas podrán realizar seguimiento de la configuración del usuario y hacen que su
+							experiencia en la aplicación sea más práctica, reconociendo y recordando sus preferencias y
+							ajustes.</p>
+
+						<p>En esta medida, Norton de Colombia podrá recopilar datos de uso, como la duración de uso, o
+							datos demográficos como el origen, el sexo y la edad. Norton de Colombia usa esta
+							información para fines analíticos. El usuario de Norton de Colombia podrá deshabilitar estas
+							herramientas.</p>
+
+						<p>Las actividades de seguimiento adelantadas por Norton de Colombia también podrán realizarse
+							dentro de la aplicación, para análisis interno, ejemplo, pero no exclusivamente para
+							determinar tendencias y participación en la aplicación, tiempo de uso, preferencia, entre
+							otros. Estas herramientos podrán ser desactivadas por el usuario ‘para conservar su
+							privacidad.</p>
+
+						<p>Análisis de datos</p>
+
+						<p>El usuario al crear su cuenta y hacer uso de la aplicación Norton de Colombia, acepta que LA
+							EMPRESA puede suministrar, transferir, compartir y analizar los datos del giro ordinario de
+							su negocio, con empresas aliadas, fililales, vinculadas o subordinadas de LA EMPRESA en
+							Colombia o cualquier otro país, esta información podrá ser usada para fines comerciales por
+							parte de los terceros.</p>
+
+						<p>El usuario en cualquier momento puede solicitar a LA EMPRESA que detenga de forma indefinida
+							el proceso de compartir sus datos con terceros, para esto debe realizar su solicitud al
+							correo soporte@Norton de Colombia.com o comunicarse a través del chat de atención al
+							cliente.</p>
+
+						<p>Seguridad de la Cuenta</p>
+
+						<p>Norton de Colombia vela por la seguridad de la contraseña que provea el titular de cuenta y
+							los usuarios a la hora de registrar una cuenta con Norton de Colombia y garantiza que tomará
+							las medidas que se encuentren a su alcance para que esta contraseña no sea vista por
+							terceros, mas no puede arrogarse la responsabilidad de garantizar su confidencialidad. Por
+							otro lado Norton de Colombia no se responsabiliza por el mal uso de la contraseña por parte
+							del usuario ni por el uso de contraseñas que sean fáciles de descifrar, asumiendo que
+							siempre que se acceda al sistema, lo hace el usuario directamente.</p>
+
+						<p>Operación del Sitio</p>
+
+						<p>Norton de Colombia llevará a cabo las gestiones que a su juicio estime conducentes,
+							tendientes a que los sitios webs asociados siempre estén disponibles para el usuario, pero
+							no garantiza lo anterior, tanto por los daños en las comunicaciones, por actos de terceros,
+							mantenimiento o reestructuración de los sitios u otro tipo de actos que se escapen del
+							alcance y responsabilidad directa de Norton de Colombia. No obstante lo anterior,Norton de
+							Colombia garantiza a los usuarios que pagan por el servicio, que el software estará
+							disponible en www.Norton de Colombia.com y www.Norton de Colombia.co desde cualquier lugar
+							del mundo que permita una conexión a internet, siempre y cuando el usuario recuerde las
+							credenciales de su cuenta y las condiciones de prestación del servicio de conexión a
+							Internet por parte de cada proveedor, lo permitan, lo cual escapa de las obligaciones de
+							Norton de Colombia, de manera tal que si no se pudiera acceder por el tipo de conexión y las
+							características que le sean propias, por fallas en la comunicación o por el deficiente
+							servicio del mencionado proveedor, ello no implica en ningún momento incumplimiento de la
+							prestación del servicio contratado por parte de Norton de Colombia. En cuanto al
+							mantenimiento y reestructuración del sitio, Norton de Colombia se reserva el derecho de
+							hacerlo sin previo aviso a los usuarios, pero procurará que se les brinde un aviso con la
+							antelación que a su juicio considere conveniente o prudente para evitar incomodidades o
+							eventuales perjuicios en el procesamiento de datos o de información.</p>
+
+						<p>Limitaciones</p>
+
+						<p>EL CLIENTE no podrá aplicar técnicas de ingeniería inversa, descompilar o desensamblar el
+							software, ni realizar cualquier otra operación que tienda a descubrir el código fuente.
+							Además queda prohibida la separación de los componentes. Norton de Colombia autoriza el uso
+							del software como un producto único. Las partes que lo componen no se podrán separar para
+							utilizarlas en más de aquellas unidades o estaciones de trabajo en las que lo instale LA
+							EMPRESA, ni hacer uso de ellas por separado. El usuario comprende que faltar a lo dispuesto
+							en ésta cláusula constituye un delito de acuerdo al artículo 272 del Código Penal
+							Colombiano.</p>
+
+						<p>Interrupción y Terminación del Servicio</p>
+
+						<p>Norton de Colombia se reserva el derecho de terminar el servicio en cualquier momento, tanto
+							de manera permanente como temporal, para aquellos casos en los que se deban realizar pagos
+							sucesivos.</p>
+
+						<p>Norton de Colombia podrá terminar de manera unilateral la cuenta de un usuario en los
+							siguientes escenarios: (i) En caso de que el USUARIO utilice los servicios prestados por
+							Norton de Colombia para fines contrarios a la ley, especialmente aquellos que contraríen
+							derechos de propiedad intelectual de terceros y sobre de todos de Norton de Colombia y de
+							otros usuarios; (ii) En caso de que Norton de Colombia encuentre que el USUARIO está
+							haciendo uso de su cuenta para la transmisión de programas malignos como virus, malwares,
+							spywares, troyanos o similares, que puedan comprometer el debido funcionamiento de la
+							plataforma de Norton de Colombia o que perjudiquen a terceros; (iii) Cuando existan
+							elementos que permitan inferir a Norton de Colombia que el USUARIO no cuenta con la edad
+							mínima para contratar los Servicios, en los términos del artículo segundo de estas
+							Condiciones.</p>
+
+						<p>Norton de Colombia se reserva el derecho a decidir si el contenido publicado por los
+							usuarios, al igual que el material de texto o fotográfico que sea cargado a la página web de
+							Norton de Colombia resulta apropiado y se ajusta a las Condiciones. En éste sentido, Norton
+							de Colombia podrá impedir la publicación y comercialización de contenido que infrinja
+							derechos de imagen, de habeas data y de privacidad de terceros, así como aquellos que
+							resulten ofensivos, difamatorios o que constituyan infracciones a la ley.</p>
+
+						<p>Parágrafo: Suspensión Del Servicio.</p>
+
+						<p>LA EMPRESA se reserva el derecho de suspender la prestación de los servicios al USUARIO y de
+							inhabilitar su acceso al Software, así como a cualquiera de los módulos creados para EL
+							USUARIO si luego de dos intentos de cobro del servicio el recaudo resulta fallido, o en caso
+							de no recibir el pago del servicio en la forma acordada.</p>
+
+						<p>Se dará la suspensión del servicio al USUARIO con aviso anticipado.</p>
+
+						<p>Legislación Aplicable y Jurisdicción</p>
+
+						<p>Este contrato se rige por las leyes de la República de Colombia. Si cualquier parte de este
+							contrato se declara nula o contraria a la ley, entonces la provisión inválida o no exigible
+							se considerará sustituida por una disposición válida y aplicable que más se acerque a la
+							intención del contrato original y el resto del acuerdo entre Norton de Colombia y el usuario
+							continuará en efecto. A menos que se especifique lo contrario en este documento, estas
+							Condiciones constituyen el acuerdo completo entre usted y Norton de Colombia con respecto a
+							los Servicios de Norton de Colombia y reemplaza a todas las comunicaciones previas y
+							propuestas, tanto de manera electrónica, oral o escrita, entre el usuario y Norton de
+							Colombia con respecto a los Servicios de Norton de Colombia.</p>
+
+						<p>Derecho de retracto.</p>
+
+						<p>El USUARIO podrá ejercer su derecho al retracto en los términos del artículo 47 de la Ley
+							1480 de 2011, es decir, podrá solicitar que se reverse la transacción perdiendo el dominio
+							sobre su cuenta y recibiendo la devolución de lo pagado. Para efectos de poder ejercer el
+							derecho de retracto será necesario que el USUARIO lo ejerza dentro de la oportunidad legal,
+							es decir durante los cinco (5) días posteriores a la celebración del contrato.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal politicas de privacidad -->
+		<div class="modal fade" id="politicas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h1 class="terminosmodal-container">Politica de datos personales</h1>
+					</div>
+					<div class="modal-body">
+						<p>
+							Norton de Colombia S.A.S., con domicilio en la Ciudad de Medellín, Colombia, actuará
+							directamente, a través de su empresa matriz, grupo empresarial o terceros como responsable
+							del tratamiento de los datos personales de sus empleados, ex empleados, empleados de sus
+							contratistas, proveedores, usuarios y posibles usuarios de sus servicios. En cumplimiento de
+							la legislación aplicable y de políticas corporativas, Norton de Colombia S.A.S puede
+							requerir transmitir o transferir dichos datos a sus compañías matrices, filiales y/o
+							subsidiarias nacionales o extranjeras.
+						</p>
+						<p>
+							La presente Política de aplicaciones móviles explica el modo en que Norton de Colombia puede
+							recopilar y procesar la información personal para los servicios en línea a los que se accede
+							desde dispositivos móviles (“Aplicaciones Móviles”). Esto se aplica a todas las aplicaciones
+							móviles de Norton de Colombia que se vinculen a esta política. Tenga en cuenta que la
+							presente es una descripción general de la información que puede ser procesada; se aplicarán
+							avisos y términos específicos adicionales en función de las aplicaciones móviles de que se
+							trate, cuando corresponda y/o las leyes lo exijan.
+						</p>
+						<strong>1. LA INFORMACIÓN QUE RECOPILAMOS Y CÓMO LA USAMOS</strong>
+						<p>
+							A continuación describimos los tipos de información que recopilamos y cómo se utiliza. La
+							información que se recopile dependerá de la funcionalidad de la aplicación móvil que utilice
+							en particular y es posible que se recopile información adicional a través de la aplicación
+							móvil según se especifique en dicha aplicación.
+							<strong>
+								Información que envía a través de la aplicación móvil:
+							</strong>
+						</p>
+						<p>Cuando usted se registra para usar una aplicación móvil, puede proporcionar (a) su nombre,
+							dirección de correo electrónico, teléfono, nombre de usuario, contraseña y otra información
+							de registro; (b) información relacionada con transacciones, como cuando realiza compras,
+							responde a ofertas, o descarga o utiliza aplicaciones móviles a través de nuestros
+							servicios; (c) información que nos proporciona cuando se comunica con nosotros para
+							solicitar ayuda; (d) información de tarjetas de crédito para la compra y el uso de la
+							aplicación móvil, y (e) la información que usted ingresa a nuestro sistema cuando utiliza la
+							aplicación móvil, como la información de contacto. También podemos utilizar la información
+							que nos proporcionó, de acuerdo con las leyes aplicables, para comunicarnos con usted
+							ocasionalmente a fin de proporcionarle información importante, avisos obligatorios y
+							promociones de marketing.
+						</p>
+						<strong>
+							Información que podemos recopilar a través de la
+							aplicación móvil:
+						</strong>
+						<p>
+							Según la funcionalidad de una aplicación móvil en particular, también podríamos recopilar
+							información adicional a través de su uso de la aplicación móvil, incluido (a) su número de
+							teléfono móvil, (b) cualquier nombre que le haya asignado a su dispositivo; (c) la libreta
+							de contactos/direcciones; (d) el historial de exploración web; (e) la información de otras
+							aplicaciones que haya descargado o utilizado, (f) otra información almacenada en su
+							dispositivo, como videos, fotografías, ubicación de las fotografías, archivos de audio,
+							calendario, contraseñas, marcador, micrófono y/o credenciales de redes sociales. Podemos
+							utilizar los la información recopilada a través de la aplicación móvil según se indica
+							específicamente en la aplicación móvil, y para evaluar el rendimiento de nuestra aplicación
+							móvil u otros servicios en línea, prevenir fraudes, proporcionar soporte técnico, con fines
+							de investigación y análisis, para resolver las operaciones internas de los servicios en
+							línea y/o para responder a sus necesidades. También podríamos utilizar esta información para
+							personalizar los servicios que ofrecemos nosotros o nuestras compañías afiliadas, lo que
+							incluye la publicidad personalizada en algunas aplicaciones móviles.
+						</p>
+						<strong>Números únicos de las aplicaciones móviles:</strong>
+						<p>
+							Cuando instale o desinstale una aplicación móvil que contenga un número único de aplicación
+							móvil, o cuando dicho servicio busque actualizaciones automáticas, es posible que recibamos
+							ese número. Es posible que también recibamos información sobre su instalación, por ejemplo,
+							el tipo de sistema operativo. Podemos utilizar los números únicos de las aplicaciones
+							móviles según se indica específicamente en la aplicación móvil, y para evaluar el
+							rendimiento de nuestra aplicación móvil u otros servicios en línea, prevenir fraudes,
+							proporcionar soporte técnico, con fines de investigación y análisis, para resolver las
+							operaciones internas de los servicios en línea y/o para responder a sus necesidades. También
+							podríamos utilizar esta información para personalizar los servicios que ofrecemos nosotros o
+							nuestras compañías afiliadas, lo que incluye la publicidad personalizada en algunas
+							aplicaciones móviles.
+						</p>
+						<strong>2. CÓMO COMPARTIMOS INFORMACIÓN PERSONAL</strong>
+						<p>
+							De conformidad con las leyes y los términos aplicables de nuestra Política de privacidad ,
+							es posible que compartamos su información personal y de uso con proveedores de análisis,
+							servicios de medición digital y de videos, con proveedores de sistemas operativos, de
+							plataformas, de servicios de red (carriers) y/u otras aplicaciones móviles operadas por
+							nosotros o por terceros, o por cualquier otra entidad descrita en una aplicación móvil en
+							particular.
+						</p>
+						<strong>3. RECOPILACIÓN AUTOMÁTICA DE DATOS Y PUBLICIDAD</strong>
+						<p>
+							Algunas de nuestras aplicaciones móviles son respaldadas mediante publicidades, y usan
+							terceros para recopilar datos y personalizar anuncios publicitarios según sus intereses y su
+							uso de varias aplicaciones, exploración web y otros datos. Los datos basados en intereses
+							pueden constar de, entre otros, Id. únicos de dispositivo, datos de registro o información
+							similar, junto con datos sobre qué aplicaciones usa usted y datos relacionados con el uso.
+							Esta publicidad ayuda a que los servicios en línea sean sin cargo o con un costo bajo.
+							Ciertas compañías de análisis que usamos también podrían recopilar automáticamente datos
+							para ayudarnos a comprender cómo se está utilizando el servicio en línea, como la frecuencia
+							y la duración del uso. También podemos trabajar con revendedores de datos de consumidores
+							que compran y/o venden información a otras compañías para múltiples fines, incluida la
+							oferta de productos y servicios que podrían interesarle.
+						</p>
+						<strong>4. EXCLUSIONES VOLUNTARIAS</strong>
+						<p>
+							Además de las opciones que le ofrezcan los sistemas operativos de sus aplicaciones móviles,
+							podría excluirse voluntariamente de la recopilación de información en las aplicaciones
+							móviles de la siguiente forma:
+						</p>
+						<p>
+							Desinstalar la aplicación móvil: puede impedir toda recopilación de información por parte de
+							su aplicación móvil de manera sencilla, desinstalando la aplicación móvil. Puede utilizar
+							los procesos de desinstalación estándares disponibles en su dispositivo móvil o a través de
+							la red o el mercado de la aplicación móvil.
+						</p>
+						<strong>5. </strong>
+						<strong>ACCESO</strong>
+						<a name="acceso"></a>
+						<strong></strong>
+						<p>
+							Para ayudar a proteger su privacidad y seguridad, tomaremos las medidas razonables a fin de
+							verificar su identidad, como solicitar una contraseña e identificación de usuario, y
+							posiblemente una identificación con foto, antes de otorgarle acceso a su información
+							personal.
+						</p>
+						<strong>6. CONTÁCTESE CON NOSOTROS</strong>
+						<p>
+							Si tiene alguna consulta en relación con esta política de aplicaciones móviles, contáctenos
+							por correo electrónico a
+							<a style="color:blue;" href="mailto:gerencia@nortondecolombia.com.co">
+								gerencia@nortondecolombia.com.co
+							</a>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Home -->
+		<section id="home">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12" style="padding-top: 300px; padding-right: 940px">
+						<p class="titlehome">Mi Unidad Residencial App puede integrar de manera segura y confiable todos
+							las partes interesadas del conjunto residencial.</p>
+						<a class="tutorials-link borderclass" href="https://www.youtube.com/watch?v=IkaqfedgUKc"
+							role="button" target="_blank">Ver Video</a>
+					</div>
+				</div>
+			</div><!-- /.container -->
+		</section>
+
+		<!-- Servicios -->
+		<section id="servicios">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-header">
+							Servicios
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<h2 style="text-align: center; font-weight: bold">Haga realidad una nueva manera de administrar su
+						Conjunto Residencial usando la tecnología</h2>
+					<br>
+					<div class="feature-container col-xs-12">
+						<div class="row">
+							<div class="feature col-xs-10 col-xs-offset-2 col-sm-6 col-sm-offset-0 text-center">
+								<div>
+									<img src="./imgs/a.png" alt="">
+								</div>
+								<h2 class="titleservice">Plataforma <br> Administrador</h2>
+								<p>Smooth, animated scroll between navigation links</p>
+							</div>
+
+							<div class="feature col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 text-center">
+								<div>
+									<img src="./imgs/e.png" alt="">
+								</div>
+								<h2 class="titleservice">App Móvil <br> Residentes</h2>
+								<p>Track page locations when scrolling</p>
+							</div><!-- /.feature -->
+
+							<!-- <div class="feature col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 text-center">
+									<svg class="lnr lnr-bullhorn">
+										<use xlink:href="#lnr-bullhorn"></use>
+									</svg>
+									<h4>Focus Events</h4>
+									<p>Draw user attention to navigated sections</p>
+								</div> -->
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Estrategia -->
+		<section id="ejes">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-header">
+							4 ejes estratégicos
+						</div>
+					</div>
+				</div>
+				<h2 style="text-align: center; font-weight: bold">Atrévase a crear una realidad futura positiva para la
+					comunidad del Conjunto Residencial.</h2>
+				<br>
+				<div class="row hidden-md-up">
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card-block" style="text-align: center; font-weight: bold">
+								<h4 class="card-title">Salud Financiera</h4>
+								<br>
+								<p class="card-text p-y-1">
+									<p class="eje">+Cultura de pago</p>
+									<p class="eje">–Morosidad</p>
+									<p class="eje">+Recaudo</p>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row hidden-md-up">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-block bordereje">
+									<h4 class="card-title">Seguridad</h4>
+									<br>
+									<p class="card-text p-y-1">
+										<p class="eje">+Agilidad en respuesta</p>
+										<p class="eje">+Denuncia inmediata</p>
+										<p class="eje">–Actos inseguros</p>
+										<p class="eje">-Incidentes</p>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="row hidden-md-up">
+							<div class="col-md-3">
+								<div class="card">
+									<div class="card-block bordereje">
+										<h4 class="card-title">Mantenimiento</h4>
+										<br>
+										<p class="card-text p-y-1">
+											<p class="eje">+Reporte de mantenimiento</p>
+											<p class="eje">+Hoja de vida</p>
+											<p class="eje">+Seguimiento</p>
+											<p class="eje">+BD activos</p>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="row hidden-md-up">
+								<div class="col-md-3">
+									<div class="card ">
+										<div class="card-block bordereje">
+											<h4 class="card-title">Convivencia</h4>
+											<br>
+											<div class="card-text p-y-1">
+												<p class="eje">+Oportunidad de integración</p>
+												<p class="eje">+Comunicación</p>
+												<p class="eje">+Comunidad</p>
+												<p class="eje">-Fricciones</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+		</section>
+
+		<!-- Caracteristicas -->
+		<section id="caracteristicas">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-header">
+							Características
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="card">
+							<div class="card-body">
+								<h4 style="text-align: center; font-weight: bold">Para el conjunto residencial:</h4>
+								<p class="card-text" style="text-align: justify;">
+									<ul>
+										<li type="circle">Contenidos autoadministrables</li>
+										<br>
+										<li type="circle">Personalizada con nombre, logos, colores e imagen corporativa
+										</li>
+										<br>
+										<li type="circle">Capacitación y entrenamiento</li>
+										<br>
+										<li type="circle">Soporte y asistencia</li>
+										<br>
+										<li type="circle">Acceso vía internet (no inversión en infraestructura)</li>
+										<br>
+										<li type="circle">Manual de usuario</li>
+										<br>
+										<li type="circle">Admisión de usuarios</li>
+										<br>
+										<li type="circle">Campaña de expectativa y de lanzamiento</li>
+									</ul>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="card">
+							<div class="card-body">
+								<h4 style="text-align: center; font-weight: bold">Para la Comunidad:</h4>
+								<div class="card-text" style="text-align: justify;">
+									<ul>
+										<li type="circle">Amigable</li>
+										<br>
+										<li type="circle">Fácil de usar</li>
+										<br>
+										<li type="circle">Capacitación y entrenamiento</li>
+										<br>
+										<li type="circle">Acceso 7x24x365 vía internet (en todo momento y todo lugar)
+										</li>
+										<br>
+										<li type="circle">Acceso con clave y contraseña segura</li>
+										<br>
+										<li type="circle">Botón de pagos</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Porque Adquirirlo -->
+		<section id="porque">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-header">
+							¿Por qué adquirirlo?
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="card-group vgr-cards">
+						<div class="card">
+							<div class="card-img-body">
+								<img class="card-img" src="./imgs/1.png" alt="Card image cap">
+							</div>
+							<div class="card-body">
+								<h4 class="card-title servicetitle">Pagar en línea la administración</h4>
+								<br>
+								<p class="card-text">
+									Permite pagar valores de administración.
+									Es una transacción segura conforme al estándar PSE.
+									Permite múltiples medios de pago con cualquier entidad bancaria adscrita en el
+									convenio.</p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-img-body">
+								<img class="card-img" src="./imgs/2.png" alt="Card image cap"></div>
+							<div class="card-body">
+								<h4 class="card-title servicetitle">Recibir alertas y anuncios de última hora</h4>
+								<br>
+								<p class="card-text">
+									Recibir alertar y anuncios:
+									Esta opción ayuda a propiciar la interacción con los usuarios brindándole
+									información de interés cotidiano, con el de crear un canal de consulta de uso
+									frecuente.
+								</p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-img-body">
+								<img class="card-img" src="./imgs/3.png" alt="Card image cap"></div>
+							<div class="card-body">
+								<h4 class="card-title servicetitle">Recibir paz y salvos y estados de cuenta</h4>
+								<br>
+								<p class="card-text">
+									Recibir paz y salvo y estado de cuenta:
+									Solicítalos cuando necesites la constancia de que estás a paz y salvo con la
+									administración.
+								</p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-img-body">
+								<img class="card-img" src="./imgs/4.png" alt="Card image cap">
+							</div>
+							<div class="card-body">
+								<h4 class="card-title servicetitle">Reservar servicios de la unidad</h4>
+								<br>
+								<p class="card-text">
+									Para facilitar el proceso de reserva del salón social, Mi unidad
+									residencial APP le permite consultar la disponibilidad, reservar o cancelar la
+									reserva del salón social de su unidad.
+									Todos los propietarios y residentes pueden reservar el salón social, para ello, días
+									previos al evento, deben realizar una solicitud a través de la APP. Se procede a
+									verificar la disponibilidad del espacio y se enviará oportunamente una respuesta.
+								</p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-img-body">
+								<img class="card-img" src="./imgs/5.png" alt="Card image cap"></div>
+							<div class="card-body">
+								<h4 class="card-title servicetitle">Solicitar o anunciar mantenimientos preventivos o
+									correctivos</h4>
+								<br>
+								<p class="card-text">
+									Los usuarios pueden solicitar el mantenimiento preventivo de los
+									servicios, zonas comunes entre otros, así como el mantenimiento correctivo en caso
+									de que estén deteriorados.</p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-img-body">
+								<img class="card-img" src="./imgs/6.png" alt="Card image cap"></div>
+							<div class="card-body">
+								<h4 class="card-title servicetitle">Participar en votaciones de iniciativas y proyectos
+									y en foros de discusión </h4>
+								<br>
+								<p class="card-text">
+									Permite realizar el registro de varios temas y registrar la votación contabilizando
+									el numero de personas que hicieron clic en SI o No.
+									La visualización de la votación permite a los usuario ver de manera inmediata y
+									transparente los votos para el SI o para el NO con su respectivo coeficiente y
+									reduce el tiempo de duración de la reunión.</p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-img-body">
+								<img class="card-img" src="./imgs/7.png" alt="Card image cap">
+							</div>
+							<div class="card-body">
+								<h4 class="card-title servicetitle">Entre muchas otras ventajas más</h4>
+								<br>
+								<p class="card-text">This is a wider card with supporting text below as a natural
+									lead-in to additional content. This content is a little bit longer. This is a wider
+									card with supporting text below as a natural lead-in to additional content. This
+									content is a little
+									bit longer.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contactenos -->
+		<section id="contactenos">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-header">
+							Contáctenos
+						</div>
+					</div>
+				</div>
+				<div class="row highlight">
+					<div class="col-md-9">
+						<div class="pb">
+							<span class="lnr lnr-map-marker"></span> Carrera 43 N° 40H Sur - 85 Int 402
+							Envigado,
+							Antioquia
+						</div>
+						<div class="pb">
+							<span class="lnr lnr-phone-handset"></span> +57 316 824 7983 / +57 (4) 366 1442
+						</div>
+						<div class="pb">
+							<span class="lnr lnr-envelope"></span>
+							<a href="mailto:gerencia@nortondecolombia.com.co" target="_top" style="color: black ">
+								gerencia@nortondecolombia.com.co</a>
+						</div>
+						<div class="pb">
+							<span class="lnr lnr-earth"></span> <a href="http://nortondecolombia.com.co/"
+								target="_blank" style="color: black"> www.nortondecolombia.com.co</a>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<article class="contenedor-redes-sociales">
+							<div class="icono">
+								<a href="https://www.facebook.com/nortondecolombia" class="icono-primary"
+									target="_blank"><i class="fa fa-facebook"></i></a>
+
+								<div class="contenedor-descripcion">
+									<a href="#" class="icono-descripcion">Seguir Facebook</a>
+								</div>
+							</div>
+							<div class="icono">
+								<a href="https://twitter.com/Community_Maker" class="icono-primary color-twitter"
+									target="_blank"><i class="fa fa-twitter"></i></a>
+
+								<div class="contenedor-descripcion">
+									<a href="#" class="icono-descripcion color-twitter">Seguir Twitter</a>
+								</div>
+							</div>
+							<div class="icono">
+								<a href="https://plus.google.com/114090693030000856714"
+									class="icono-primary color-linkedin" target="_blank"><i
+										class="fa fa-linkedin"></i></a>
+
+								<div class="contenedor-descripcion">
+									<a href="#" class="icono-descripcion color-linkedin">Seguir LinkedIn</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-md-12" style="text-align: center">
+						<hr>
+						Copyright © <span id='year'></span> Norton de Colombia. All rights reserved.
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</body>
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+	<script src="https://use.fontawesome.com/02f5a599c4.js"></script>
+	<script src="./script.js"></script>
+
+</body>
+
+</html>
