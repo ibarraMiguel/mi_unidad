@@ -45,7 +45,7 @@ p {
 }
 p highlight {
   font-weight: 600;
-  color: #f9c741;
+  color: #f6bf4e;
 }
 p:last-child {
   margin-bottom: 0;
@@ -145,7 +145,7 @@ nav.navbar.show-color .navbar-home {
   color: #e7e6f1;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 924px) {
   .navbar-collapse {
     background: #e5e4ea;
   }
@@ -154,7 +154,7 @@ nav.navbar.show-color .navbar-home {
 ul.navbar-nav {
   color: #333;
 }
-@media (min-width: 768px) {
+@media (min-width: 925px) {
   ul.navbar-nav {
     display: flex;
     flex-direction: row;
@@ -162,9 +162,10 @@ ul.navbar-nav {
     justify-content: center;
     float: none;
     text-align: center;
-    color: #BDC4D0;
+    color: #BDC4D0 !important;
   }
 }
+
 @media (min-width: 768px) {
   ul.navbar-nav > li {
     float: none;
@@ -188,16 +189,16 @@ ul.navbar-nav > li > a:hover {
 ul.navbar-nav > li > a:focus {
   background: rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 767px) {
+@media (max-width: 925px) {
   ul.navbar-nav > li.active {
     background: rgba(0, 0, 0, 0.1);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 925px) {
   ul.navbar-nav > li.active {
-    color: #f9c741;
+    color: #f6bf4e;
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: inset 0 -3px 0 0 #f9c741;
+    box-shadow: inset 0 -3px 0 0 #f6bf4e;
   }
 }
 ul.navbar-nav > li.active > a:hover, ul.navbar-nav > li.active > a:focus {
@@ -213,7 +214,7 @@ section:last-of-type {
   min-height: 20vh;
 }
 section.focus .page-header {
-  color: #f9c741;
+  color: #f6bf4e;
 }
 section.focus .page-header:after {
   visibility: visible;
@@ -238,7 +239,7 @@ section.focus .page-header:after {
   bottom: 0;
   width: 70px;
   height: 2px;
-  background: #f9c741;
+  background: #f6bf4e;
   -webkit-transform: translate(-50%, 0);
   -webkit-transform: translate3d(-50%, 0, 0);
   transform: translate(-50%, 0);
@@ -311,13 +312,13 @@ a.tutorials-link {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
-  color: #f9c741;
-  border: 2px solid #f9c741;
+  color: #f6bf4e;
+  border: 2px solid #f6bf4e;
   transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 a.tutorials-link:hover {
   color: #e7e6f1;
-  background: #f9c741;
+  background: #f6bf4e;
   box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.3);
 }
 
@@ -334,7 +335,7 @@ a.tutorials-link:hover {
   text-decoration: none;
   padding: 0;
   color: #e7e6f1;
-  background: #f9c741;
+  background: #f6bf4e;
   border: none;
   border-radius: 100%;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
@@ -390,7 +391,7 @@ a.tutorials-link:hover {
   min-height: 400px;
   height: 60vh;
   /* background-image: url("https://hd.unsplash.com/photo-1457365050282-c53d772ef8b2"); */
-  background-image: url("./imgs/home.gif");
+  background-image: url("../imgs/home.gif");
   background-size: cover;
   background-position: center bottom;
   will-change: transform;
@@ -482,7 +483,7 @@ a.tutorials-link:hover {
   text-transform: uppercase;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
-  color: #f9c741;
+  color: #f6bf4e;
 }
 #home p {
   margin: 0;
@@ -706,7 +707,7 @@ a.tutorials-link:hover {
   text-transform: uppercase;
   line-height: 24px;
   letter-spacing: 2px;
-  color: #f9c741;
+  color: #f6bf4e;
 }
 #features .feature p {
   font-size: 14px;
@@ -1100,7 +1101,7 @@ a.tutorials-link:hover {
     background: rgba(255, 255, 255, 0.7);
   }
   40%, to {
-    background: #f9c741;
+    background: #f6bf4e;
   }
 }
 @keyframes scrollColor-1 {
@@ -1108,75 +1109,75 @@ a.tutorials-link:hover {
     background: rgba(255, 255, 255, 0.7);
   }
   40%, to {
-    background: #f9c741;
+    background: #f6bf4e;
   }
 }
 @-webkit-keyframes scrollColor-2 {
   from, 24% {
-    background: #f9c741;
+    background: #f6bf4e;
   }
   24.2%, 28% {
     background: #b2a5e5;
   }
   28.2%, 39.9% {
-    background: #f9c741;
+    background: #f6bf4e;
   }
   40%, 69.9% {
     background: rgba(255, 255, 255, 0.7);
   }
   70%, to {
-    background: #f9c741;
+    background: #f6bf4e;
   }
 }
 @keyframes scrollColor-2 {
   from, 24% {
-    background: #f9c741;
+    background: #f6bf4e;
   }
   24.2%, 28% {
     background: #b2a5e5;
   }
   28.2%, 39.9% {
-    background: #f9c741;
+    background: #f6bf4e;
   }
   40%, 69.9% {
     background: rgba(255, 255, 255, 0.7);
   }
   70%, to {
-    background: #f9c741;
+    background: #f6bf4e;
   }
 }
 @-webkit-keyframes scrollColor-3 {
   from, 53.8% {
-    background: #f9c741;
+    background: #f6bf4e;
   }
   54%, 57.8% {
     background: #b2a5e5;
   }
   58%, 69.9% {
-    background: #f9c741;
+    background: #f6bf4e;
   }
   70%, 99.9% {
     background: rgba(255, 255, 255, 0.7);
   }
   to {
-    background: #f9c741;
+    background: #f6bf4e;
   }
 }
 @keyframes scrollColor-3 {
   from, 53.8% {
-    background: #f9c741;
+    background: #f6bf4e;
   }
   54%, 57.8% {
     background: #b2a5e5;
   }
   58%, 69.9% {
-    background: #f9c741;
+    background: #f6bf4e;
   }
   70%, 99.9% {
     background: rgba(255, 255, 255, 0.7);
   }
   to {
-    background: #f9c741;
+    background: #f6bf4e;
   }
 }
 @-webkit-keyframes scrollBackToTop {
@@ -1382,7 +1383,7 @@ a.tutorials-link:hover {
     background: #dcdfeb;
   }
   40.2%, 70% {
-    background: #f9c741;
+    background: #f6bf4e;
   }
   75%, to {
     background: #dcdfeb;
@@ -1393,7 +1394,7 @@ a.tutorials-link:hover {
     background: #dcdfeb;
   }
   40.2%, 70% {
-    background: #f9c741;
+    background: #f6bf4e;
   }
   75%, to {
     background: #dcdfeb;
@@ -1654,6 +1655,11 @@ hr {
   border-radius: 20px;
   padding: 0 8px;
   box-sizing: border-box;
+  outline: none;
+}
+
+.selectclass:hover{
+  border-color: #004a80 !important;
 }
 
 .loginmodal {
@@ -1730,6 +1736,11 @@ hr {
 
 .borderclass{
   border-radius: 20px;
+  outline: none;
+}
+
+.borderclass:hover{
+  border-color: #004a80 !important;
 }
 
 .field-icon {
@@ -1753,12 +1764,22 @@ hr {
     line-height: 1.2857em;
 }
 
+.bodytext{
+  color: rgba(42,45,55,.8);
+  font-weight: 550!important;
+}
+
+.img-logo {
+  max-width: 112%;
+  height: auto;
+}
+
 .titlehome{
   font-size: 17px;
   font-weight: 700 !important;
 }
 
-@media (max-width: 1125px){
+@media (max-width: 800px){
   .titlehome {
     display: none;
   }
@@ -1771,6 +1792,8 @@ hr {
     letter-spacing: 0.5px;
     line-height: 1.6rem;
     text-align: center;
+    color: rgba(42,45,55,.8);
+    font-weight: 550!important;
 }
 
 .bordereje{
@@ -1780,6 +1803,15 @@ hr {
    font-weight: bold;
 }
 
+@media (max-width: 990px){
+  .bordereje {
+    text-align: center; 
+    border-left: none;
+     height: 180px;
+     font-weight: bold;
+  }
+}
+
 .servicetitle{
   color: #2b2f3b;
   font-weight: 700!important;
@@ -1787,10 +1819,6 @@ hr {
 }
 
 /*Card Porque*/
-body {
-  margin-top: 20px;
-}
-
 .card {
   border: none;
 }
@@ -1854,4 +1882,103 @@ body {
   .vgr-cards .card-body {
     padding: 0;
   }
+}
+
+
+/*Modal Noticias*/
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.modal-dialog {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.modal-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.modal-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  padding: 10px;
+  background: transparent;
+  border: 0;
+}
+.modal-title {
+  font-weight: 300;
+  font-size: 2em;
+  color: #000;
+  line-height: 30px;
+  text-align: center;
+}
+.modal-body {
+  position: absolute;
+  top: 50px;
+  bottom: 1px;
+  width: 100%;
+  font-weight: 300;
+  overflow: auto;
+}
+.modal-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  padding: 10px;
+  background-color: transparent !important;
+}
+.btn {
+  height: 40px;
+  border-radius: 0;
+}
+.btn:focus,
+.btn:active,
+.btn:active:focus {
+  box-shadow: none;
+  outline: none;
+}
+.btn-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -100px;
+  width: 200px;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  color: white;
+  background: #cc7272;
+  border: 0;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  background: #f1f3f5;
+  border-left: 1px solid #d3d9e0;
+}
+::-webkit-scrollbar-thumb {
+  background: #b5c0cb;
 }

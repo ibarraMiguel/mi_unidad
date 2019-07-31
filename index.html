@@ -6,16 +6,19 @@
 	<title>Mi Unidad Residencial</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Open Sans -->
+	<link rel="shortcut icon" type="image/png" href="imgs/icon.png">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+	<!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>-->
+	<link rel="stylesheet" href="css/bootstrap-3.3.6.css">
 	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" type="text/css" href="css/overhang.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/blog.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
 <body>
@@ -35,23 +38,99 @@
 						<span class="sr-only">Toggle navigation</span>
 						<i class="material-icons">&#xE5D2;</i>
 					</button>
-					<a class="navbar-brand" href="#home">Boom Scroll
-						<i class="material-icons">mouse</i>
+					<span class="navbar-brand" style="max-width: 255px">
+						<a href="#home">
+						<img class="img-logo" src="./imgs/logo.png">
 					</a>
+					</span>
 				</div>
 				<div class="collapse navbar-collapse" id="scroll-spy">
-
 					<ul class="nav navbar-nav ">
 						<li><a href="#servicios">Servicios</a></li>
 						<li><a href="#ejes">Estratégia</a></li>
 						<li><a href="#caracteristicas">Características</a></li>
 						<li><a href="#porque">¿Por qué adquirirlo?</a></li>
 						<li><a href="#contactenos">Contáctenos</a></li>
+						<li><a href="" data-toggle="modal" data-target="#fsModal">Noticias</a></li>
 						<li><a href="" data-toggle="modal" data-target="#login-modal">Iniciar Sesión</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
+
+		<!-- Modal Noticias -->
+		<div id="fsModal" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 id="myModalLabel" class="modal-title">
+							Noticias
+						</h1>
+						<button class="btn btn-secondary" data-dismiss="modal" style="margin-top: -45px; margin-left: 100px">
+							Cerrar
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<div class="table-responsive-sm">
+								<table class="table">
+									<thead>
+										<tr class="info">
+											<th style="text-align:center">
+												<p style="font-size: 100%">Seleccione un elemento de las listas
+													desplegables para filtrar contenido</p>
+											</th>
+										</tr>
+									</thead>
+								</table>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td class="col-sm-6" style="text-align:right">
+												<select class="borderclass" id="cat"></select>
+												<select class="borderclass" id="subcat"></select>
+											</td>
+											<td class="col-sm-6" style="text-align:left">
+												<input class="borderclass" type="button" id="filtrar" value="Filtrar">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td class="col-sm-2"></td>
+											<td class="col-sm-4" style="text-align:right">
+												<input class="buscar borderclass" type="text" id="buscador"
+													placeholder="Buscar aquí..." autofocus>
+											</td>
+											<td class="col-sm-4" style="text-align:left">
+												<input class="borderclass" type="button" id="buscar" value="Buscar">
+											</td>
+											<td class="col-sm-2"></td>
+										</tr>
+									</tbody>
+								</table>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td class="col-sm-12" style="text-align:center">
+												<div id="principal" align='center'></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Modal Inicio sesion -->
 		<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -61,24 +140,31 @@
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h1>Inicie Sesión</h1>
+					<h1 class="bodytext">Inicie Sesión</h1>
 					<br>
 					<form action="" enctype="application/x-www-form-urlencoded" method="POST">
-						<select class="selectclass" data-toggle="tooltip" data-placement="bottom"
+						<select id="selectlogin" class="selectclass bodytext" data-toggle="tooltip" style="text-align: center;
+						text-align-last: center;" data-placement="bottom"
 							title="Si es del personal administrativo por favor seleccione la opción entrar como Administrador. Si usted es un usuario, use la aplicación móvil ó seleccione la opción entrar como Usuario."
 							required>
 							<option value="">Seleccione Rol</option>
-							<option value="usuario" onchange="this.form.action='/m/index.pl'">Usuario</option>
-							<option value="admin" onchange="this.form.action='/m/customer.pl'">Administrador</option>
-							<option value="app" onchange="this.form.action='./login_verificar.php'">App Manager</option>
+							<option value="usuario">Usuario</option>
+							<option value="admin">Administrador</option>
+							<option value="gestor">App Manager</option>
 						</select>
-						<input class="borderclass" type="text" name="user" placeholder="Usuario" required>
-						<input class="borderclass" id="password-field" type="password" name="password" value=""
-							placeholder="Contraseña" required>
+
+						<input class="borderclass bodytext" style="text-align: center;" type="text" id="usuario"
+							name="user" placeholder="Usuario" required>
+
+						<input class="borderclass bodytext" style="text-align: center;" id="password-field"
+							type="password" name="password" value="" placeholder="Contraseña" required>
 						<span toggle="#password-field" class="fa eye fa-eye field-icon toggle-password"></span>
-						<input type="submit" name="login" class="login loginmodal-submit" value="Iniciar Sesión">
+						<div align="center">
+							<input type="button" id="login" name="login" class="login loginmodal-submit"
+								value="Iniciar Sesión">
+						</div>
 					</form>
-					<span class="login-help">
+					<span class="login-help bodytext">
 						<a>Al iniciar sesión acepta los </a>
 						<a href="#terminos" data-toggle="modal" data-target="#terminos"> <u style="color: blue">términos
 								y
@@ -388,9 +474,6 @@
 							derecho de retracto será necesario que el USUARIO lo ejerza dentro de la oportunidad legal,
 							es decir durante los cinco (5) días posteriores a la celebración del contrato.</p>
 					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -535,9 +618,6 @@
 							</a>
 						</p>
 					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -546,14 +626,18 @@
 		<section id="home">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12" style="padding-top: 300px; padding-right: 940px">
-						<p class="titlehome">Mi Unidad Residencial App puede integrar de manera segura y confiable todos
-							las partes interesadas del conjunto residencial.</p>
-						<a class="tutorials-link borderclass" href="https://www.youtube.com/watch?v=IkaqfedgUKc"
-							role="button" target="_blank">Ver Video</a>
+					<div class="col-xs-12">
+						<div style="padding-top: 300px; float: left; width: 50%">
+							<p class="titlehome">Mi Unidad Residencial App puede integrar de manera segura y confiable
+								todos
+								las partes interesadas del conjunto residencial.</p>
+							<a class="tutorials-link borderclass" href="https://www.youtube.com/watch?v=IkaqfedgUKc"
+								role="button" target="_blank">Ver Video</a>
+						</div>
+
 					</div>
 				</div>
-			</div><!-- /.container -->
+			</div>
 		</section>
 
 		<!-- Servicios -->
@@ -568,37 +652,32 @@
 				</div>
 
 				<div class="row">
-					<h2 style="text-align: center; font-weight: bold">Haga realidad una nueva manera de administrar su
+					<h2 style="text-align: center; font-weight: bold; padding: 15px">Haga realidad una nueva manera de
+						administrar su
 						Conjunto Residencial usando la tecnología</h2>
 					<br>
-					<div class="feature-container col-xs-12">
+					<div class="feature-container col-md-12">
 						<div class="row">
-							<div class="feature col-xs-10 col-xs-offset-2 col-sm-6 col-sm-offset-0 text-center">
+							<div class="feature col-md-6 text-center">
 								<div>
-									<img src="./imgs/a.png" alt="">
+									<img src="./imgs/admin.png" alt="">
 								</div>
 								<h2 class="titleservice">Plataforma <br> Administrador</h2>
-								<p>Smooth, animated scroll between navigation links</p>
+								<p class="bodytext">Gestione las principales características de la aplicación,
+									agilizando la visualización del contenido por parte de los usuarios.</p>
 							</div>
-
-							<div class="feature col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 text-center">
+							<br>
+							<div class="feature col-md-6 text-center">
 								<div>
-									<img src="./imgs/e.png" alt="">
+									<img src="./imgs/comunidad.png" alt="">
 								</div>
 								<h2 class="titleservice">App Móvil <br> Residentes</h2>
-								<p>Track page locations when scrolling</p>
-							</div><!-- /.feature -->
-
-							<!-- <div class="feature col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 text-center">
-									<svg class="lnr lnr-bullhorn">
-										<use xlink:href="#lnr-bullhorn"></use>
-									</svg>
-									<h4>Focus Events</h4>
-									<p>Draw user attention to navigated sections</p>
-								</div> -->
+								<p class="bodytext">Tenga a la mano la información de su unidad residencial, genere
+									preguntas, solicite asistencia, realice los pagos de administración, salón de
+									eventos, gimnasio, entre otros, de forma fácil, ágil y segura.</p>
+							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</section>
@@ -615,11 +694,12 @@
 				</div>
 				<h2 style="text-align: center; font-weight: bold">Atrévase a crear una realidad futura positiva para la
 					comunidad del Conjunto Residencial.</h2>
-				<br>
-				<div class="row hidden-md-up">
+				<br><br>
+				<div class="row">
 					<div class="col-md-3">
 						<div class="card">
-							<div class="card-block" style="text-align: center; font-weight: bold">
+							<div class="card-block" style="text-align: center; font-weight: bold;height: 180px;
+							">
 								<h4 class="card-title">Salud Financiera</h4>
 								<br>
 								<p class="card-text p-y-1">
@@ -630,52 +710,58 @@
 							</div>
 						</div>
 					</div>
-					<div class="row hidden-md-up">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-block bordereje">
-									<h4 class="card-title">Seguridad</h4>
-									<br>
-									<p class="card-text p-y-1">
+
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card-block bordereje">
+								<h4 class="card-title">Seguridad</h4>
+								<br>
+								<p class="card-text p-y-1">
+									<div class="bodytext">
 										<p class="eje">+Agilidad en respuesta</p>
 										<p class="eje">+Denuncia inmediata</p>
 										<p class="eje">–Actos inseguros</p>
 										<p class="eje">-Incidentes</p>
-									</p>
+									</div>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card-block bordereje">
+								<h4 class="card-title">Mantenimiento</h4>
+								<br>
+								<p class="card-text p-y-1">
+									<div class="bodytext">
+										<p class="eje">+Reporte de mantenimiento</p>
+										<p class="eje">+Hoja de vida</p>
+										<p class="eje">+Seguimiento</p>
+										<p class="eje">+BD activos</p>
+									</div>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="card ">
+							<div class="card-block bordereje">
+								<h4 class="card-title">Convivencia</h4>
+								<br>
+								<div class="card-text p-y-1 ">
+									<div class="bodytext">
+										<p class="eje">+Oportunidad de integración</p>
+										<p class="eje">+Comunicación</p>
+										<p class="eje">+Comunidad</p>
+										<p class="eje">-Fricciones</p>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="row hidden-md-up">
-							<div class="col-md-3">
-								<div class="card">
-									<div class="card-block bordereje">
-										<h4 class="card-title">Mantenimiento</h4>
-										<br>
-										<p class="card-text p-y-1">
-											<p class="eje">+Reporte de mantenimiento</p>
-											<p class="eje">+Hoja de vida</p>
-											<p class="eje">+Seguimiento</p>
-											<p class="eje">+BD activos</p>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="row hidden-md-up">
-								<div class="col-md-3">
-									<div class="card ">
-										<div class="card-block bordereje">
-											<h4 class="card-title">Convivencia</h4>
-											<br>
-											<div class="card-text p-y-1">
-												<p class="eje">+Oportunidad de integración</p>
-												<p class="eje">+Comunicación</p>
-												<p class="eje">+Comunidad</p>
-												<p class="eje">-Fricciones</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+					</div>
+				</div>
 		</section>
 
 		<!-- Caracteristicas -->
@@ -690,50 +776,58 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-6">
-						<div class="card">
+						<div class="card" style="padding: 15px;">
 							<div class="card-body">
 								<h4 style="text-align: center; font-weight: bold">Para el conjunto residencial:</h4>
+								<br>
 								<p class="card-text" style="text-align: justify;">
 									<ul>
-										<li type="circle">Contenidos autoadministrables</li>
-										<br>
-										<li type="circle">Personalizada con nombre, logos, colores e imagen corporativa
-										</li>
-										<br>
-										<li type="circle">Capacitación y entrenamiento</li>
-										<br>
-										<li type="circle">Soporte y asistencia</li>
-										<br>
-										<li type="circle">Acceso vía internet (no inversión en infraestructura)</li>
-										<br>
-										<li type="circle">Manual de usuario</li>
-										<br>
-										<li type="circle">Admisión de usuarios</li>
-										<br>
-										<li type="circle">Campaña de expectativa y de lanzamiento</li>
+										<div class="bodytext">
+											<li type="circle">Contenidos autoadministrables</li>
+											<br>
+											<li type="circle">Personalizada con nombre, logos, colores e imagen
+												corporativa
+											</li>
+											<br>
+											<li type="circle">Capacitación y entrenamiento</li>
+											<br>
+											<li type="circle">Soporte y asistencia</li>
+											<br>
+											<li type="circle">Acceso vía internet (no inversión en infraestructura)</li>
+											<br>
+											<li type="circle">Manual de usuario</li>
+											<br>
+											<li type="circle">Admisión de usuarios</li>
+											<br>
+											<li type="circle">Campaña de expectativa y de lanzamiento</li>
+										</div>
 									</ul>
 								</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-sm-6">
-						<div class="card">
+						<div class="card" style="padding: 15px;">
 							<div class="card-body">
 								<h4 style="text-align: center; font-weight: bold">Para la Comunidad:</h4>
+								<br>
 								<div class="card-text" style="text-align: justify;">
 									<ul>
-										<li type="circle">Amigable</li>
-										<br>
-										<li type="circle">Fácil de usar</li>
-										<br>
-										<li type="circle">Capacitación y entrenamiento</li>
-										<br>
-										<li type="circle">Acceso 7x24x365 vía internet (en todo momento y todo lugar)
-										</li>
-										<br>
-										<li type="circle">Acceso con clave y contraseña segura</li>
-										<br>
-										<li type="circle">Botón de pagos</li>
+										<div class="bodytext">
+											<li type="circle">Amigable</li>
+											<br>
+											<li type="circle">Fácil de usar</li>
+											<br>
+											<li type="circle">Capacitación y entrenamiento</li>
+											<br>
+											<li type="circle">Acceso 7x24x365 vía internet (en todo momento y todo
+												lugar)
+											</li>
+											<br>
+											<li type="circle">Acceso con clave y contraseña segura</li>
+											<br>
+											<li type="circle">Botón de pagos</li>
+										</div>
 									</ul>
 								</div>
 							</div>
@@ -762,7 +856,7 @@
 							<div class="card-body">
 								<h4 class="card-title servicetitle">Pagar en línea la administración</h4>
 								<br>
-								<p class="card-text">
+								<p class="card-text bodytext">
 									Permite pagar valores de administración.
 									Es una transacción segura conforme al estándar PSE.
 									Permite múltiples medios de pago con cualquier entidad bancaria adscrita en el
@@ -775,7 +869,7 @@
 							<div class="card-body">
 								<h4 class="card-title servicetitle">Recibir alertas y anuncios de última hora</h4>
 								<br>
-								<p class="card-text">
+								<p class="card-text bodytext">
 									Recibir alertar y anuncios:
 									Esta opción ayuda a propiciar la interacción con los usuarios brindándole
 									información de interés cotidiano, con el de crear un canal de consulta de uso
@@ -789,7 +883,7 @@
 							<div class="card-body">
 								<h4 class="card-title servicetitle">Recibir paz y salvos y estados de cuenta</h4>
 								<br>
-								<p class="card-text">
+								<p class="card-text bodytext">
 									Recibir paz y salvo y estado de cuenta:
 									Solicítalos cuando necesites la constancia de que estás a paz y salvo con la
 									administración.
@@ -803,7 +897,7 @@
 							<div class="card-body">
 								<h4 class="card-title servicetitle">Reservar servicios de la unidad</h4>
 								<br>
-								<p class="card-text">
+								<p class="card-text bodytext">
 									Para facilitar el proceso de reserva del salón social, Mi unidad
 									residencial APP le permite consultar la disponibilidad, reservar o cancelar la
 									reserva del salón social de su unidad.
@@ -820,7 +914,7 @@
 								<h4 class="card-title servicetitle">Solicitar o anunciar mantenimientos preventivos o
 									correctivos</h4>
 								<br>
-								<p class="card-text">
+								<p class="card-text bodytext">
 									Los usuarios pueden solicitar el mantenimiento preventivo de los
 									servicios, zonas comunes entre otros, así como el mantenimiento correctivo en caso
 									de que estén deteriorados.</p>
@@ -833,7 +927,7 @@
 								<h4 class="card-title servicetitle">Participar en votaciones de iniciativas y proyectos
 									y en foros de discusión </h4>
 								<br>
-								<p class="card-text">
+								<p class="card-text bodytext">
 									Permite realizar el registro de varios temas y registrar la votación contabilizando
 									el numero de personas que hicieron clic en SI o No.
 									La visualización de la votación permite a los usuario ver de manera inmediata y
@@ -848,11 +942,11 @@
 							<div class="card-body">
 								<h4 class="card-title servicetitle">Entre muchas otras ventajas más</h4>
 								<br>
-								<p class="card-text">This is a wider card with supporting text below as a natural
-									lead-in to additional content. This content is a little bit longer. This is a wider
-									card with supporting text below as a natural lead-in to additional content. This
-									content is a little
-									bit longer.</p>
+								<p class="card-text bodytext">
+									Con esta APP tanto el administrador como el usuario,
+									pueden participar de manera activa,
+									tanto en la pregunta como en la respuesta a las solicitudes planteadas
+									en una comunicación de doble vía.</p>
 							</div>
 						</div>
 					</div>
@@ -872,12 +966,12 @@
 				</div>
 				<div class="row highlight">
 					<div class="col-md-9">
-						<div class="pb">
+						<div class="pb bodytext">
 							<span class="lnr lnr-map-marker"></span> Carrera 43 N° 40H Sur - 85 Int 402
 							Envigado,
 							Antioquia
 						</div>
-						<div class="pb">
+						<div class="pb bodytext">
 							<span class="lnr lnr-phone-handset"></span> +57 316 824 7983 / +57 (4) 366 1442
 						</div>
 						<div class="pb">
@@ -919,7 +1013,7 @@
 							</div>
 						</article>
 					</div>
-					<div class="col-md-12" style="text-align: center">
+					<div class="col-md-12 bodytext" style="text-align: center">
 						<hr>
 						Copyright © <span id='year'></span> Norton de Colombia. All rights reserved.
 					</div>
@@ -929,9 +1023,14 @@
 
 	</body>
 	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+	<!--<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>-->
+	<script src="js/bootstrap-3.3.6.js"></script>
+	<script src="https://unpkg.com/sweetalert2@7.17.0/dist/sweetalert2.all.js"></script>
 	<script src="https://use.fontawesome.com/02f5a599c4.js"></script>
-	<script src="./script.js"></script>
+	<script type="text/javascript" src="js/overhang.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/blog.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
 
 </body>
 
