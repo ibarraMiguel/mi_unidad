@@ -12,10 +12,11 @@
 
 	<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>-->
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 	<link rel="stylesheet" href="css/bootstrap-3.3.6.css">
 	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/overhang.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/blog.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
@@ -40,19 +41,20 @@
 					</button>
 					<span class="navbar-brand" style="max-width: 255px">
 						<a href="#home">
-						<img class="img-logo" src="./imgs/logo.png">
-					</a>
+							<img class="img-logo" src="./imgs/logo.png">
+						</a>
 					</span>
 				</div>
-				<div class="collapse navbar-collapse" id="scroll-spy">
+				<div class="collapse navbar-collapse" id="scroll-spy" style="font-size: 13px">
 					<ul class="nav navbar-nav ">
-						<li><a href="#servicios">Servicios</a></li>
-						<li><a href="#ejes">Estratégia</a></li>
-						<li><a href="#caracteristicas">Características</a></li>
-						<li><a href="#porque">¿Por qué adquirirlo?</a></li>
-						<li><a href="#contactenos">Contáctenos</a></li>
-						<li><a href="" data-toggle="modal" data-target="#fsModal">Noticias</a></li>
-						<li><a href="" data-toggle="modal" data-target="#login-modal">Iniciar Sesión</a></li>
+						<li><a href="#servicios"><u>Servicios</u></a></li>
+						<li><a href="#ejes"><u>Estratégia</u></a></li>
+						<li><a href="#beneficios"><u>Beneficios</u></a></li>
+						<li><a href="#caracteristicas"><u>Características</u></a></li>
+						<li><a href="#porque"><u>¿Por qué adquirirlo?</u></a></li>
+						<li><a href="#contactenos"><u>Contáctenos</u></a></li>
+						<li><a href="" data-toggle="modal" data-target="#fsModal"><u>Noticias</u></a></li>
+						<li><a href="" data-toggle="modal" data-target="#login-modal"><u>Iniciar Sesión</u></a></li>
 					</ul>
 				</div>
 			</div>
@@ -67,7 +69,8 @@
 						<h1 id="myModalLabel" class="modal-title">
 							Noticias
 						</h1>
-						<button class="btn btn-secondary" data-dismiss="modal" style="margin-top: -45px; margin-left: 100px">
+						<button class="btn btn-secondary" data-dismiss="modal"
+							style="margin-top: -45px; margin-left: 100px">
 							Cerrar
 						</button>
 					</div>
@@ -144,7 +147,7 @@
 					<br>
 					<form action="" enctype="application/x-www-form-urlencoded" method="POST">
 						<select id="selectlogin" class="selectclass bodytext" data-toggle="tooltip" style="text-align: center;
-						text-align-last: center;" data-placement="bottom"
+						text-align-last: center;" data-placement="right"
 							title="Si es del personal administrativo por favor seleccione la opción entrar como Administrador. Si usted es un usuario, use la aplicación móvil ó seleccione la opción entrar como Usuario."
 							required>
 							<option value="">Seleccione Rol</option>
@@ -634,7 +637,6 @@
 							<a class="tutorials-link borderclass" href="https://www.youtube.com/watch?v=IkaqfedgUKc"
 								role="button" target="_blank">Ver Video</a>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -656,14 +658,23 @@
 						administrar su
 						Conjunto Residencial usando la tecnología</h2>
 					<br>
+					<div class="video-responsive">
+						<video src="./imgs/video.mp4" type="video/mp4" autoplay width="640" height="360"
+							controls></video>
+					</div>
+					<br>
 					<div class="feature-container col-md-12">
 						<div class="row">
+							<br>
 							<div class="feature col-md-6 text-center">
 								<div>
 									<img src="./imgs/admin.png" alt="">
 								</div>
+								<br>
 								<h2 class="titleservice">Plataforma <br> Administrador</h2>
-								<p class="bodytext">Gestione las principales características de la aplicación,
+								<p class="bodytext" style="text-align: justify">Gestione las principales características
+									de la aplicación, no solo administrando de manera eficiente el menú de servicios que
+									quiere habilitar a la comunidad de propietarios y residentes, sino también
 									agilizando la visualización del contenido por parte de los usuarios.</p>
 							</div>
 							<br>
@@ -672,9 +683,11 @@
 									<img src="./imgs/comunidad.png" alt="">
 								</div>
 								<h2 class="titleservice">App Móvil <br> Residentes</h2>
-								<p class="bodytext">Tenga a la mano la información de su unidad residencial, genere
-									preguntas, solicite asistencia, realice los pagos de administración, salón de
-									eventos, gimnasio, entre otros, de forma fácil, ágil y segura.</p>
+								<p class="bodytext" style="text-align: justify">Tenga a la mano la información de su
+									unidad residencial, genere preguntas, solicite asistencia, realice los pagos de
+									administración, reservas de espacios, salón de eventos, gimnasio, acceda al
+									directorio de servicios, haga uso del botón de emergencias, consulte el directorio
+									interno, reporte objetos perdidos, entre otros, de forma fácil, ágil y segura.</p>
 							</div>
 						</div>
 					</div>
@@ -688,15 +701,15 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="section-header">
-							4 ejes estratégicos
+							5 ejes estratégicos
 						</div>
 					</div>
 				</div>
-				<h2 style="text-align: center; font-weight: bold">Atrévase a crear una realidad futura positiva para la
-					comunidad del Conjunto Residencial.</h2>
+				<h2 style="text-align: center; font-weight: bold"> Mi Unidad Residencial aporta beneficios reales y
+					sostenibles a cada uno de los 5 ejes estratégicos del conjunto residencial:</h2>
 				<br><br>
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="card">
 							<div class="card-block" style="text-align: center; font-weight: bold;height: 180px;
 							">
@@ -711,7 +724,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="card">
 							<div class="card-block bordereje">
 								<h4 class="card-title">Seguridad</h4>
@@ -728,7 +741,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="card">
 							<div class="card-block bordereje">
 								<h4 class="card-title">Mantenimiento</h4>
@@ -744,10 +757,14 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="col-md-3">
+				</div>
+				<br>
+				<br>
+				<div class="row">
+					<div class="col-md-6">
 						<div class="card ">
-							<div class="card-block bordereje">
+							<div class="card-block" style="text-align: center; font-weight: bold;height: 180px;
+							">
 								<h4 class="card-title">Convivencia</h4>
 								<br>
 								<div class="card-text p-y-1 ">
@@ -761,16 +778,38 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="col-md-6">
+						<div class="card ">
+							<div class="card-block bordereje">
+								<h4 class="card-title">SGSST</h4>
+								<br>
+								<div class="card-text p-y-1 ">
+									<div class="bodytext">
+										<p class="eje">+Almacenamiento digital de registros</p>
+										<p class="eje">+Indicadores y métricas en línea</p>
+										<p class="eje">+Control de registros</p>
+										<p class="eje">+Planes de formación</p>
+										<p class="eje">+Control documental</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				<br><br><br>
+				<h2 style="text-align: center; font-weight: bold">Atrévase a crear una realidad futura positiva para la
+					comunidad del Conjunto Residencial.</h2>
 		</section>
 
-		<!-- Caracteristicas -->
-		<section id="caracteristicas">
+		<!-- Beneficios -->
+		<section id="beneficios">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="section-header">
-							Características
+							Beneficios
 						</div>
 					</div>
 				</div>
@@ -783,23 +822,29 @@
 								<p class="card-text" style="text-align: justify;">
 									<ul>
 										<div class="bodytext">
-											<li type="circle">Contenidos autoadministrables</li>
+											<li type="circle">Fortalece la cultura de pago, proveyendo medios de pago
+												modernos y eficientes.</li>
 											<br>
-											<li type="circle">Personalizada con nombre, logos, colores e imagen
-												corporativa
-											</li>
+											<li type="circle">Ganar prestigio y reputación por usar enfoque moderno
+												basado en tecnología.</li>
 											<br>
-											<li type="circle">Capacitación y entrenamiento</li>
+											<li type="circle">Conseguir una orientación efectiva a la comunidad (hacer
+												comunidad). </li>
 											<br>
-											<li type="circle">Soporte y asistencia</li>
+											<li type="circle">Integrar los diferentes procesos de la Administración
+												evitando que funcionen de manera aislada o descoordinada.</li>
 											<br>
-											<li type="circle">Acceso vía internet (no inversión en infraestructura)</li>
+											<li type="circle">Procurar la calidad de los servicios y la adecuación a las
+												necesidades reales de la comunidad. </li>
 											<br>
-											<li type="circle">Manual de usuario</li>
+											<li type="circle">Gestionar el servicio teniendo en cuenta toda la cadena de
+												valor (de extremo a extremo). </li>
 											<br>
-											<li type="circle">Admisión de usuarios</li>
+											<li type="circle">Valoriza la propiedad.</li>
 											<br>
-											<li type="circle">Campaña de expectativa y de lanzamiento</li>
+											<li type="circle">La Administración mejorará su productividad (los
+												requerimientos no se olvidan no se pierden, se registran, se controlan y
+												se resuelven).</li>
 										</div>
 									</ul>
 								</p>
@@ -814,17 +859,32 @@
 								<div class="card-text" style="text-align: justify;">
 									<ul>
 										<div class="bodytext">
-											<li type="circle">Amigable</li>
+											<li type="circle">Sentido de pertenencia.</li>
 											<br>
-											<li type="circle">Fácil de usar</li>
+											<li type="circle">Sensación y percepción de buen servicio, con atención
+												oportuna, ágil y diligente.</li>
 											<br>
-											<li type="circle">Capacitación y entrenamiento</li>
+											<li type="circle">Sensación de seguridad, con riesgo mínimo y controles
+												efectivos.</li>
 											<br>
-											<li type="circle">Acceso 7x24x365 vía internet (en todo momento y todo
-												lugar)
-											</li>
+											<li type="circle">Interacción continua y permanente con la administración
+												desde cualquier ubicación geográfica y en todo momento.</li>
 											<br>
-											<li type="circle">Acceso con clave y contraseña segura</li>
+											<li type="circle">Genera inclusión (soy tenido en cuenta).</li>
+											<br>
+											<li type="circle">Cubrimiento a toda la comunidad sin diferencias de ninguna
+												clase.</li>
+											<br>
+											<li type="circle">Sensación de modernismo en su entorna cotidiano (laboral,
+												social y vecindario).</li>
+											<br>
+											<li type="circle">Valoriza la propiedad.</li>
+											<br>
+											<li type="circle">Elimina fricciones entre los miembros porque todos están
+												enterados de una sola fuente oficial (cero chismes).</li>
+											<br>
+											<li type="circle">Fortalece la cultura de pago a través del uso de medios
+												eficientes y modernos.</li>
 											<br>
 											<li type="circle">Botón de pagos</li>
 										</div>
@@ -833,6 +893,63 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Caractesristicas -->
+		<section id="caracteristicas">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-header">
+							Características
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8">
+						<div class="card-body" style="padding: 15px;">
+							<p class="card-text" style="text-align: justify;">
+								<ul>
+									<div class="bodytext">
+										<li type="circle">Amigable, liviana y fácil de usar.</li>
+										<br>
+										<li type="circle">Recepción y visualización automática de notificaciones en
+											el celular cuando haya actualización de contenido.</li>
+										<br>
+										<li type="circle">Acceso 7x24x365 vía internet (en todo momento y lugar).
+										</li>
+										<br>
+										<li type="circle">Acceso con clave y contraseña segura.</li>
+										<br>
+										<li type="circle">Chat integrado con la Administración (opcional).</li>
+										<br>
+										<li type="circle">Panel WEB de gestión y administración, para el
+											administrador y sus colaboradores.</li>
+										<br>
+										<li type="circle">Contenidos autoadministrables por el administrador.</li>
+										<br>
+										<li type="circle">Personalizada con nombre, logos, colores e imagen
+											corporativa.</li>
+										<br>
+										<li type="circle">Capacitación, entrenamiento, soporte y asistencia
+											permanente</li>
+										<br>
+										<li type="circle">Servicio en la nube con costo por demanda (no incurre en
+											gastos en infraestructura TIC).
+										</li>
+										<br>
+										<li type="circle">Campaña de expectativa y de lanzamiento</li>
+										<br>
+										<li type="circle">Indicadores de gestión en-línea y tiempo real</li>
+									</div>
+								</ul>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-2"></div>
 				</div>
 			</div>
 		</section>
@@ -854,26 +971,27 @@
 								<img class="card-img" src="./imgs/1.png" alt="Card image cap">
 							</div>
 							<div class="card-body">
-								<h4 class="card-title servicetitle">Pagar en línea la administración</h4>
+								<h4 class="card-title servicetitle">Pagos en línea</h4>
 								<br>
 								<p class="card-text bodytext">
-									Permite pagar valores de administración.
-									Es una transacción segura conforme al estándar PSE.
-									Permite múltiples medios de pago con cualquier entidad bancaria adscrita en el
-									convenio.</p>
+									Permite hacer pagos por todo tipo de concepto, por ejemplo, valores de
+									administración, cuotas extras, valores por reserva de espacio, entre otros. Es una
+									transacción segura conforme al estándar PSE, de manera segura y confiable con
+									cualquier entidad financiera adscrita en el convenio.</p>
 							</div>
 						</div>
 						<div class="card">
 							<div class="card-img-body">
 								<img class="card-img" src="./imgs/2.png" alt="Card image cap"></div>
 							<div class="card-body">
-								<h4 class="card-title servicetitle">Recibir alertas y anuncios de última hora</h4>
+								<h4 class="card-title servicetitle">Sistema de notificación automática en línea vía
+									celular</h4>
 								<br>
 								<p class="card-text bodytext">
-									Recibir alertar y anuncios:
-									Esta opción ayuda a propiciar la interacción con los usuarios brindándole
-									información de interés cotidiano, con el de crear un canal de consulta de uso
-									frecuente.
+									Permite a la comunidad de usuarios recibir notificaciones, alertas y anuncios de
+									tipo individual o grupal. Este servicio ayuda a propiciar la interacción con los
+									usuarios brindando información de interés cotidiano, con el fin de crear un canal de
+									comunicación de uso frecuente.
 								</p>
 							</div>
 						</div>
@@ -881,12 +999,15 @@
 							<div class="card-img-body">
 								<img class="card-img" src="./imgs/3.png" alt="Card image cap"></div>
 							<div class="card-body">
-								<h4 class="card-title servicetitle">Recibir paz y salvos y estados de cuenta</h4>
+								<h4 class="card-title servicetitle">Sistema de intercambio de documentos electrónicos
+								</h4>
 								<br>
 								<p class="card-text bodytext">
-									Recibir paz y salvo y estado de cuenta:
-									Solicítalos cuando necesites la constancia de que estás a paz y salvo con la
-									administración.
+									Permite gestionar todo tipo de documentos que quieran compartirse con la comunidad,
+									desde, enviar un recibo de paz y salvo, un estado de cuenta, un balance consolidado,
+									una factura, una certificado, hasta el manual de convivencia, entre otros. Algunos
+									de estos documentos pueden expedirse de manera automática a solicitud del usuario,
+									sin intervención de la administración.
 								</p>
 							</div>
 						</div>
@@ -895,14 +1016,12 @@
 								<img class="card-img" src="./imgs/4.png" alt="Card image cap">
 							</div>
 							<div class="card-body">
-								<h4 class="card-title servicetitle">Reservar servicios de la unidad</h4>
+								<h4 class="card-title servicetitle">Sistema de reserva de espacios comunitarios</h4>
 								<br>
 								<p class="card-text bodytext">
-									Para facilitar el proceso de reserva del salón social, Mi unidad
-									residencial APP le permite consultar la disponibilidad, reservar o cancelar la
-									reserva del salón social de su unidad.
-									Todos los propietarios y residentes pueden reservar el salón social, para ello, días
-									previos al evento, deben realizar una solicitud a través de la APP. Se procede a
+									Permite al usuario reservar o cancelar la reserva de todo tipo de espacios, desde el
+									salón social, el gimnasio, salón de eventos, entre otros, para ello, días previos al
+									evento, deben realizar una solicitud a través de la aplicación, se procede a
 									verificar la disponibilidad del espacio y se enviará oportunamente una respuesta.
 								</p>
 							</div>
@@ -949,6 +1068,12 @@
 									en una comunicación de doble vía.</p>
 							</div>
 						</div>
+						<p class="card-text bodytext">
+							Mi Unidad Residencial (denominación comercial de la aplicación) pretende ayudar
+							a los ADMINISTRADORES a construir COMUNIDAD habilitando un espacio virtual en la ‘nube’ en
+							el que un grupo de personas interactúen libremente de forma segura, permanente y sobre todo
+							confiable, con el fin de mejorar la CONVIVENCIA.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -964,69 +1089,128 @@
 						</div>
 					</div>
 				</div>
-				<div class="row highlight">
-					<div class="col-md-9">
-						<div class="pb bodytext">
-							<span class="lnr lnr-map-marker"></span> Carrera 43 N° 40H Sur - 85 Int 402
-							Envigado,
-							Antioquia
-						</div>
-						<div class="pb bodytext">
-							<span class="lnr lnr-phone-handset"></span> +57 316 824 7983 / +57 (4) 366 1442
-						</div>
-						<div class="pb">
-							<span class="lnr lnr-envelope"></span>
-							<a href="mailto:gerencia@nortondecolombia.com.co" target="_top" style="color: black ">
-								gerencia@nortondecolombia.com.co</a>
-						</div>
-						<div class="pb">
-							<span class="lnr lnr-earth"></span> <a href="http://nortondecolombia.com.co/"
-								target="_blank" style="color: black"> www.nortondecolombia.com.co</a>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<article class="contenedor-redes-sociales">
-							<div class="icono">
-								<a href="https://www.facebook.com/nortondecolombia" class="icono-primary"
-									target="_blank"><i class="fa fa-facebook"></i></a>
-
-								<div class="contenedor-descripcion">
-									<a href="#" class="icono-descripcion">Seguir Facebook</a>
+				<div class="contact-wrapper">
+					<div class="row">
+						<div class="col-md-6">
+							<form class="form-horizontal" method="post">
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="text" class="form-control" id="nombre" placeholder="Nombre (*)"
+											name="nombre" value="" required>
+									</div>
 								</div>
-							</div>
-							<div class="icono">
-								<a href="https://twitter.com/Community_Maker" class="icono-primary color-twitter"
-									target="_blank"><i class="fa fa-twitter"></i></a>
-
-								<div class="contenedor-descripcion">
-									<a href="#" class="icono-descripcion color-twitter">Seguir Twitter</a>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="number" class="form-control" id="telefono"
+											placeholder="Celular (*)" name="telefono" value="">
+									</div>
 								</div>
-							</div>
-							<div class="icono">
-								<a href="https://plus.google.com/114090693030000856714"
-									class="icono-primary color-linkedin" target="_blank"><i
-										class="fa fa-linkedin"></i></a>
-
-								<div class="contenedor-descripcion">
-									<a href="#" class="icono-descripcion color-linkedin">Seguir LinkedIn</a>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="email" class="form-control" id="email" placeholder="Email"
+											name="email" value="">
+									</div>
 								</div>
+								<textarea class="form-control" rows="10"
+									placeholder="Expresenos aqui su interés para: Un demo del producto o  de un contacto previo para recibir informacion preliminar."
+									name="message" id="message" required></textarea>
+								<button class="btn btn-primary send-buttonn" id="submit" type="button" value="ENVIAR">
+									<div class="buttonn">
+										<i class="fa fa-paper-plane"></i><span class="send-text">ENVIAR</span>
+									</div>
+								</button>
+								<button style="display: none" id="cargando" class="btn btn-warning send-buttonn">
+									<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+									Generando...
+								</button>
+							</form>
+						</div>
+
+						<div class="col-md-6">
+							<div class="direct-contact-container">
+								<ul class="contact-list">
+									<li class="list-item"><i class="fa fa-map-marker fa-2x">
+											<span class="contact-text place">
+												Cra 43 N° 40H Sur - 85 Int 402
+											</span>
+											<span class="contact-text place" style="padding-left: 27px">Envigado,
+												Antioquia</span>
+										</i>
+									</li>
+									<li class="list-item"><i class="fa fa-phone fa-2x">
+											<span class="contact-text phone">
+												<a href="tel:57-316-8247983">(+57) 316 824
+													7983
+												</a>
+												<br>
+											</span>
+											<span class="contact-text phone" style="padding-left: 35px">
+												<a href="tel:57-4-366-1442">+57 (4) 366
+													1442
+												</a>
+											</span>
+										</i>
+									</li>
+									<li class="list-item"><i class="fa fa-envelope fa-2x">
+											<span class="contact-text gmail">
+												<a href="mailto:#">nortondecolombia@une.net.co
+												</a>
+											</span>
+										</i>
+									</li>
+								</ul>
+								<hr>
+								<ul class="social-media-list">
+									<li><a href="#" target="_blank" class="contact-icon">
+											<i class="fa fa-linkedin" aria-hidden="true"></i></a>
+									</li>
+									<li><a href="#" target="_blank" class="contact-icon">
+											<i class="fa fa-twitter" aria-hidden="true"></i></a>
+									</li>
+									<li><a href="#" target="_blank" class="contact-icon">
+											<i class="fa fa-facebook" aria-hidden="true"></i></a>
+									</li>
+								</ul>
+								<hr>
+								<div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+
 							</div>
-						</article>
-					</div>
-					<div class="col-md-12 bodytext" style="text-align: center">
-						<hr>
-						Copyright © <span id='year'></span> Norton de Colombia. All rights reserved.
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<!-- Boton WhatsApp -->
+		<!-- <div class="nav-bottom">
+			<div class="popup-whatsapp fadeIn">
+				<div>
+					<button type="button" class="closePopup">
+						<i style="float: right;" class="material-icons icon-font-color">close</i>
+					</button>
+				</div>
+				<div class="content-whatsapp -top">
+					<p class="msg">Hola, Enviame un WhastApp para ayudarte</p>
+				</div>
+				<div class="content-whatsapp -bottom">
+					<input class="whats-input" id="whats-in" type="text" Placeholder="Escribe un mensaje..." />
+					<button class="send-msPopup" id="send-btn" type="button">
+						<i class="material-icons icon-font-color--black">send</i>
+					</button>
+				</div>
+			</div>
+			<button type="button" id="whats-openPopup" class="whatsapp-button">
+				<img class="icon-whatsapp" src="https://image.flaticon.com/icons/svg/134/134937.svg">
+			</button>
+			<div class="circle-anime"></div>
+		</div> -->
 	</body>
 	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 	<!--<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>-->
 	<script src="js/bootstrap-3.3.6.js"></script>
 	<script src="https://unpkg.com/sweetalert2@7.17.0/dist/sweetalert2.all.js"></script>
 	<script src="https://use.fontawesome.com/02f5a599c4.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	<script type="text/javascript" src="js/overhang.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/blog.js"></script>
