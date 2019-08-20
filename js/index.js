@@ -85,6 +85,10 @@ $(window).scroll(function () {
 });
 
 $(document).ready(function () {
+	$("#descarga").click(function () {
+		$(location).attr('href', 'https://play.google.com/store/apps/details?id=co.com.nortondecolombia.miunires')
+	});
+
 	$("#submit").click(function () {
 		const name = $("#nombre").val();
 		const email = $("#email").val();
