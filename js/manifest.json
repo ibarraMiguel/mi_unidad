@@ -1,0 +1,54 @@
+{
+    "name": "Mi Unidad Residencial",
+    "short_name": "MUR",
+    "description": "Mi Unidad Residencial App puede integrar de manera segura y confiable todos las partes interesadas del conjunto residencial.",
+    "background_color": "#717FC2",
+    "theme_color": "#DDDEE6",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-CO",
+    "gcm_sender_id": "103953800507",
+    "icons": [{
+            "src": "./imgs/icon_2086.png",
+            "sizes": "2086x2086",
+            "type": "image/png"
+        },
+        {
+            "src": "./imgs/icon_1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "./imgs/icon_720.png",
+            "sizes": "720x720",
+            "type": "image/png"
+        },
+        {
+            "src": "./imgs/icon_480.png",
+            "sizes": "480x480",
+            "type": "image/png"
+        }, 
+        {
+            "src": "./imgs/icon_360.png",
+            "sizes": "360x360",
+            "type": "image/png"
+        },
+        {
+            "src": "./imgs/icon_180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "./imgs/icon_90.png",
+            "sizes": "90x90",
+            "type": "image/png"
+        }, 
+        {
+            "src": "./imgs/icon_45.png",
+            "sizes": "44x45",
+            "type": "image/png"
+        }
+    ]
+}

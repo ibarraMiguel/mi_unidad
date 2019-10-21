@@ -1,0 +1,14 @@
+{
+    "esversion": 6,
+    "browser": true,
+    "devel": true,
+    "node": true,
+
+    "globals": {
+        "self": true,
+        "clients": true,
+        "firebase": true,
+        "messaging": true,
+        "importScripts": true
+    }
+}

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
 	<meta charset="UTF-8">
 	<title>Mi Unidad Residencial</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="shortcut icon" type="image/png" href="imgs/icon.png">
+	<link rel="shortcut icon" type="image/png" href="imgs/icon.png"> <!--imagen de la pestaña-->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -20,6 +20,18 @@
 	<link rel="stylesheet" type="text/css" href="css/overhang.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/blog.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<!--Elementos para PWA-->
+	<meta name="theme-color" content="#717FC2"> <!--Pintar barra del navegador-->
+	<meta name="MobileOptimized" content="width"> <!--optimizar para moviles-->
+	<meta name="HandheldFriendly" content="true"> <!--optimizar para mobiles-->
+	<meta name="apple-mobile-web-app-capable" content="yes"> <!--soporte para iOS-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!--soporte para iOS-->
+	<link rel="apple-touch-icon" href="./icon_720.png"> <!--icono de app en pantalla-->
+	<link rel="apple-touch-startup-image" href="./icon_720.png"> <!--imagen en espera de inicio de la app-->
+	<link rel="manifest" href="./js/manifest.json"> <!--el manifiesto se llama como si fuese hoja de estilos-->
+
+
 </head>
 
 <body>
@@ -1236,6 +1248,35 @@
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/blog.js"></script>
 	<script type="text/javascript" src="js/login.js"></script>
+
+
+	<!--...................IMPLEMENTAR PUSH DE FIREBASE...................-->
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+	
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+	
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyCqV8DvPTYSr7PyUN1jNcRS1r5iw7ZnsyM",
+			authDomain: "phsiempreverde.firebaseapp.com",
+			databaseURL: "https://phsiempreverde.firebaseio.com",
+			projectId: "phsiempreverde",
+			storageBucket: "phsiempreverde.appspot.com",
+			messagingSenderId: "367327564555",
+			measurementId: "G-FYR4YZLH12",
+			appId: "1:367327564555:web:ddd063d102588524d8c80e"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+	</script>
+
+
 
 </body>
 
